@@ -1,15 +1,26 @@
 {
     "name": "hexlet/code",
+    "description": "project brain games",
     "autoload": {
         "psr-4": {
-            "Hexlet\\Code\\": "src/"
-        }
+            "Hexlet\\Code\\": "src"
+        },
+        "files": [
+            "src/Cli.php",
+            "bin/brain-games"
+        ]
     },
+    "bin": [
+  	 "bin/brain-games"
+    ],
     "authors": [
         {
             "name": "MikkyBloom",
             "email": "you@example.com"
         }
     ],
-    "require": {}
+    "require": {
+        "wp-cli/php-cli-tools": "^0.11.15"
+    },
+    "license": "MIT"
 }
