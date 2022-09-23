@@ -1,10 +1,7 @@
 #!/usr/bin/env php
-
 <?php
 
-namespace Brain\Games;
-
-use function Src\Cli\welcome;
+use function BrainGames\Cli\welcome;
 
 $autoloadPath1 = __DIR__ . '/../../../autoload.php';
 
@@ -16,6 +13,7 @@ if (file_exists($autoloadPath1)) {
     require_once $autoloadPath2;
 }
 
-function generate($name) {
+function generate($name)
+{
     return welcome($name);
 }
