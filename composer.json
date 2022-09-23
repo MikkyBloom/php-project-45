@@ -6,8 +6,7 @@
             "Hexlet\\Code\\": "src"
         },
         "files": [
-            "src/Cli.php",
-            "bin/brain-games"
+            "src/Cli.php"
         ]
     },
     "bin": [

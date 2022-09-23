@@ -17,3 +17,5 @@ function generate($name)
 {
     return welcome($name);
 }
+
+generate('Nikki Sixx');
