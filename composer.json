@@ -4,18 +4,16 @@
     "autoload": {
         "psr-4": {
             "Hexlet\\Code\\": "src"
-        },
-        "files": [
-            "src/Cli.php"
-        ]
+        }
     },
     "bin": [
-  	 "bin/brain-games"
+  	    "bin/brain-games",
+  	    "bin/brain-even"
     ],
     "authors": [
         {
             "name": "MikkyBloom",
-            "email": "you@example.com"
+            "email": "miharetyt@gmail.com"
         }
     ],
     "require": {
