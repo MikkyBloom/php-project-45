@@ -22,3 +22,21 @@ function isEven($name)
     }
     print_r("Congratulations, $name!\n");
 }
+
+function calc($name)
+{
+    $numbers = ['4 + 10' => '14', '25 - 11' => '14', '25 * 7' => '175'];
+
+    line('What is the result of the expression?');
+
+    foreach ($numbers as $key => $value) {
+        $answer = prompt("Question: $key\nYour answer");
+        if ($answer !== $value) {
+            print_r("'$answer' is wrong answer ;(. Correct answer was '$value'. \nLet's try again, $name\n");
+            exit;
+        } else {
+            print_r("Correct!\n");
+        }
+    }
+    print_r("Congratulations, $name!\n");
+}

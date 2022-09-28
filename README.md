@@ -3,3 +3,6 @@
 <a href="https://codeclimate.com/github/MikkyBloom/php-project-45/maintainability"><img src="https://api.codeclimate.com/v1/badges/642b4cee01dca5652890/maintainability" /></a>
 ### asciinema brain-even:
 https://asciinema.org/a/vtM45Zwb3gk9Mjnz89AAqtyOX
+
+### asciinema brain-calc:
+https://asciinema.org/a/lUpVZdqhfsvnlt7vpOzcgCave
