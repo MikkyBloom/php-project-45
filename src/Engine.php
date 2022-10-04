@@ -103,7 +103,6 @@ function gcd($name)
         $randKey2 = array_rand($randArray);
 
         $questions[$i] = "$randArray[$randKey1] $randArray[$randKey2]";
-        //$answers[$i] = gmp_gcd($randKey1, $randKey2);
         $first = $randArray[$randKey1];
         $second = $randArray[$randKey2];
 
@@ -124,5 +123,31 @@ function gcd($name)
 
     line('Find the greatest common divisor of given numbers.');
     
+    communication($finalAssocArray, $name);
+}
+
+function progression($name)
+{
+    $progression = [];
+    $questions = [];
+    $answers = [];
+    $finalAssocArray = [];
+
+    for ($i = 0; $i < 3; $i++){
+
+        $start = rand(0, 3);
+        $end = rand(20, 50);
+        $step = rand(2, 5);
+
+        $progression = range($start, $end, $step);
+        $randKey = array_rand($progression);
+        $answers[] = $progression[$randKey];
+        $progression[$randKey] = '..';
+        $questions[$i] = implode(' ', $progression);
+    }
+    $finalAssocArray = array_combine($questions, $answers);
+
+    line('What number is missing in the progression?');
+
     communication($finalAssocArray, $name);
 }
