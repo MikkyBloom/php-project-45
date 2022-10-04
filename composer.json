@@ -3,7 +3,8 @@
     "description": "project brain games",
     "autoload": {
         "psr-4": {
-            "Hexlet\\Code\\": "src"
+            "Hexlet\\Code\\": "src/",
+            "BI\\": "lib/"
         },
         "files": [
             "src/Cli.php",
@@ -13,7 +14,8 @@
     "bin": [
   	    "bin/brain-games",
   	    "bin/brain-even",
-        "bin/brain-calc"
+        "bin/brain-calc",
+        "bin/brain-gcd"
     ],
     "authors": [
         {

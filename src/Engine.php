@@ -10,7 +10,6 @@ function randArray()
     for ($i = 0; $i < 3; $i++) {
         $randArray[] = rand(1, 100);
     }
-    // $randArray = shuffle($randArray);
     return $randArray;
 }
 
@@ -43,7 +42,6 @@ function isEven($name)
         }
     }
     $finalAssocArray = array_combine($numbers, $values);
-    // print_r($answers);
     line('Answer "yes" if the number is even, otherwise answer "no".');
 
     communication($finalAssocArray, $name);
@@ -90,44 +88,41 @@ function calc($name)
     communication($finalAssocArray, $name);
 }
 
-// $name = 'Misket';
-// print_r(calc($name));
+function gcd($name)
+{
+    $randArray = [];
+    $questions = [];
+    $answers = [];
+    $finalAssocArray = [];
 
-// $name = 'Mikky';
-// print_r(isEven($name));
+    $randArray = randArray();
 
-// function isEven($name)
-// {
-//     $numbers = ['15' => 'no', '6' => 'yes', '7' => 'no'];
+    for ($i = 0; $i < 3; $i++) {
 
-//     line('Answer "yes" if the number is even, otherwise answer "no".');
+        $randKey1 = array_rand($randArray);
+        $randKey2 = array_rand($randArray);
 
-//     foreach ($numbers as $key => $value) {
-//         $answer = prompt("Question: $key\nYour answer");
-//         if ($answer !== $value) {
-//             print_r("'$answer' is wrong answer ;(. Correct answer was '$value'. \nLet's try again, $name\n");
-//             exit;
-//         } else {
-//             print_r("Correct!\n");
-//         }
-//     }
-//     print_r("Congratulations, $name!\n");
-// }
+        $questions[$i] = "$randArray[$randKey1] $randArray[$randKey2]";
+        //$answers[$i] = gmp_gcd($randKey1, $randKey2);
+        $first = $randArray[$randKey1];
+        $second = $randArray[$randKey2];
 
-// function calc($name)
-// {
-//     $numbers = ['4 + 10' => '14', '25 - 11' => '14', '25 * 7' => '175'];
+        $min = min($first, $second);
+    
+        while ($first != $second)
+        {
+            if ($first > $second) {
+                $first =  $first - $second;
+            } else {
+                $second = $second - $first;
+            }
+        }
+        $answers[$i] = $second;
 
-//     line('What is the result of the expression?');
+    }
+    $finalAssocArray = array_combine($questions, $answers);
 
-//     foreach ($numbers as $key => $value) {
-//         $answer = prompt("Question: $key\nYour answer");
-//         if ($answer !== $value) {
-//             print_r("'$answer' is wrong answer ;(. Correct answer was '$value'. \nLet's try again, $name\n");
-//             exit;
-//         } else {
-//             print_r("Correct!\n");
-//         }
-//     }
-//     print_r("Congratulations, $name!\n");
-// }
+    line('Find the greatest common divisor of given numbers.');
+    
+    communication($finalAssocArray, $name);
+}
