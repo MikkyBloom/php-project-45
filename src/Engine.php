@@ -18,7 +18,7 @@ function communication(array $finalAssocArray, string $name)
     foreach ($finalAssocArray as $key => $value) {
         $answer = prompt("Question: $key\nYour answer");
         if ($answer != $value) {
-            print_r("'$answer' is wrong answer ;(. Correct answer was '$value'. \nLet's try again, $name\n");
+            print_r("'$answer' is wrong answer ;(. Correct answer was '$value'. \nLet's try again, $name\n!");
             exit;
         } else {
             print_r("Correct!\n");
