@@ -154,29 +154,29 @@ function progression($name)
 
 function isPrime($name)
 {
+    //массив вопросов
     $questions = [];
+    //массив ответов
     $answers = [];
+    //массив рандомных чисел, получаемый из функции randArray()
     $randArray = [];
+    //список рандомных чисел
     $primeNumbers = [1, 2, 3, 5, 7, 9];
     
-    //$randArray = randArray();
-    $randArray = [33, 11, 23];
+    $randArray = randArray();
 
     foreach ($randArray as $number) {
         $questions[] = $number;
         if (in_array($number, $primeNumbers)) {
             $answers[] = 'yes';
-            break;
-        } elseif (!in_array($number, $primeNumbers)) {
-            for ($i = 2; $i < $number; $i++) {
-                if ($number % $i === 0) {
-                    $answers[] = 'no';
-                    break;
-                }
-            }
-        } else {
+        }
+
+        $flag = simplicity($number);
+
+        if ($flag == true) {
             $answers[] = 'yes';
-            break;
+        } else {
+            $answers[] ='no';
         }
     }
     $finalAssocArray = array_combine($questions, $answers);
@@ -186,5 +186,12 @@ function isPrime($name)
     communication($finalAssocArray, $name);
 }
 
-// $name = 'Bloo';
-// print_r(isPrime($name));
+function simplicity($number)
+{
+    for ($i = 2; $i < $number; $i++) {
+        if ($number % $i === 0) {
+            return false;
+        }
+    }
+    return true;
+}
