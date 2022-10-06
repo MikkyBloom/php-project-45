@@ -151,3 +151,40 @@ function progression($name)
 
     communication($finalAssocArray, $name);
 }
+
+function isPrime($name)
+{
+    $questions = [];
+    $answers = [];
+    $randArray = [];
+    $primeNumbers = [1, 2, 3, 5, 7, 9];
+    
+    //$randArray = randArray();
+    $randArray = [33, 11, 23];
+
+    foreach ($randArray as $number) {
+        $questions[] = $number;
+        if (in_array($number, $primeNumbers)) {
+            $answers[] = 'yes';
+            break;
+        } elseif (!in_array($number, $primeNumbers)) {
+            for ($i = 2; $i < $number; $i++) {
+                if ($number % $i === 0) {
+                    $answers[] = 'no';
+                    break;
+                }
+            }
+        } else {
+            $answers[] = 'yes';
+            break;
+        }
+    }
+    $finalAssocArray = array_combine($questions, $answers);
+    
+    line('Answer "yes" if given number is prime. Otherwise answer "no".');
+
+    communication($finalAssocArray, $name);
+}
+
+// $name = 'Bloo';
+// print_r(isPrime($name));
