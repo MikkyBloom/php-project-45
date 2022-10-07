@@ -32,21 +32,23 @@ function isEven($name)
     $numbers = [];
     $values = [];
     $finalAssocArray = [];
-    $numbers = randArray();
-
+    // $numbers = randArray();
+    $numbers = [2.5, 3.5, 6.7];
     foreach ($numbers as $number) {
-        if (($number % 2) == 0) {
+        if (intdiv($number, 2) == 0) {
             $values[] = "yes";
         } else {
             $values[] = "no";
         }
     }
     $finalAssocArray = array_combine($numbers, $values);
-    
+
     line('Answer "yes" if the number is even, otherwise answer "no".');
 
     communication($finalAssocArray, $name);
 }
+$name = 'Bloo';
+print_r(isEven($name));
 
 function calc($name)
 {
