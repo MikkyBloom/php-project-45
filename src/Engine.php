@@ -32,8 +32,8 @@ function isEven($name)
     $numbers = [];
     $values = [];
     $finalAssocArray = [];
-    // $numbers = randArray();
-    $numbers = [2.5, 3.5, 6.7];
+    $numbers = randArray();
+    
     foreach ($numbers as $number) {
         if (intdiv($number, 2) == 0) {
             $values[] = "yes";
@@ -47,8 +47,6 @@ function isEven($name)
 
     communication($finalAssocArray, $name);
 }
-$name = 'Bloo';
-print_r(isEven($name));
 
 function calc($name)
 {
