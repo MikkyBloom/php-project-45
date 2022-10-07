@@ -42,6 +42,7 @@ function isEven($name)
         }
     }
     $finalAssocArray = array_combine($numbers, $values);
+    
     line('Answer "yes" if the number is even, otherwise answer "no".');
 
     communication($finalAssocArray, $name);
