@@ -7,6 +7,7 @@ use function cli\prompt;
 
 function randArray()
 {
+    $randArray = [];
     for ($i = 0; $i < 3; $i++) {
         $randArray[] = rand(1, 100);
     }
@@ -27,7 +28,7 @@ function communication(array $finalAssocArray, string $name)
     print_r("Congratulations, $name!\n");
 }
 
-function isEven($name)
+function isEven(string $name)
 {
     $finalAssocArray = [];
 
@@ -45,7 +46,7 @@ function isEven($name)
     communication($finalAssocArray, $name);
 }
 
-function calc($name)
+function calc(string $name)
 {
     // массив случайных чисел
     $numbers = [];
@@ -85,7 +86,7 @@ function calc($name)
     communication($finalAssocArray, $name);
 }
 
-function gcd($name)
+function gcd(string $name)
 {
     $questions = [];
     $answers = [];
@@ -112,7 +113,7 @@ function gcd($name)
     communication($finalAssocArray, $name);
 }
 
-function progression($name)
+function progression(string $name)
 {
     $progression = [];
     $questions = [];
@@ -137,7 +138,7 @@ function progression($name)
     communication($finalAssocArray, $name);
 }
 
-function isPrime($name)
+function isPrime(string $name)
 {
     //массив вопросов
     $questions = [];
@@ -172,7 +173,7 @@ function isPrime($name)
     communication($finalAssocArray, $name);
 }
 
-function simplicity($number)
+function simplicity(int $number)
 {
     for ($i = 2; $i < $number; $i++) {
         if ($number % $i === 0) {
