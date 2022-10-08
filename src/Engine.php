@@ -48,41 +48,25 @@ function isEven(string $name)
 
 function calc(string $name)
 {
-    // массив случайных чисел
-    $numbers = [];
-    // массив ответов
-    $values = [];
-    // массив ключей для ответов
-    $answers = [];
-    // итоговый массив для игры
     $finalAssocArray = [];
 
-    $numbers = randArray();
-
     for ($i = 0; $i < 3; $i++) {
-        $randKey1 = array_rand($numbers);
-        $randKey2 = array_rand($numbers);
-
+        $first = rand(1, 100);
+        $second =  rand(1, 100);
         switch (mt_rand(1, 3)) {
             case 1:
-                $answers[] = "$numbers[$randKey1] + $numbers[$randKey2]";
-                $values[] = $numbers[$randKey1] + $numbers[$randKey2];
+                $finalAssocArray["$first - $second"] = $first - $second;
                 break;
             case 2:
-                $answers[] = "$numbers[$randKey1] - $numbers[$randKey2]";
-                $values[] = $numbers[$randKey1] - $numbers[$randKey2];
+                $finalAssocArray["$first + $second"] = $first + $second;
                 break;
             case 3:
-                $answers[] = "$numbers[$randKey1] * $numbers[$randKey2]";
-                $values[] = $numbers[$randKey1] * $numbers[$randKey2];
+                $finalAssocArray["$first * $second"] = $first * $second;
                 break;
         }
     }
 
-    $finalAssocArray = array_combine($answers, $values);
-
     line('What is the result of the expression?');
-
     communication($finalAssocArray, $name);
 }
 
