@@ -170,6 +170,7 @@ function isPrime($name)
         $questions[] = $number;
         if (in_array($number, $primeNumbers)) {
             $answers[] = 'yes';
+            continue;
         }
 
         $flag = simplicity($number);
