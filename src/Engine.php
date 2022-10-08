@@ -91,24 +91,16 @@ function calc($name)
 
 function gcd($name)
 {
-    $randArray = [];
     $questions = [];
     $answers = [];
     $finalAssocArray = [];
 
-    $randArray = randArray();
-
     for ($i = 0; $i < 3; $i++) {
+        $first = rand(1, 100);
+        $second = rand(1, 100);
 
-        $randKey1 = array_rand($randArray);
-        $randKey2 = array_rand($randArray);
+        $questions[$i] = "$first $second";
 
-        $questions[$i] = "$randArray[$randKey1] $randArray[$randKey2]";
-        $first = $randArray[$randKey1];
-        $second = $randArray[$randKey2];
-
-        $min = min($first, $second);
-    
         while ($first != $second)
         {
             if ($first > $second) {
@@ -118,7 +110,6 @@ function gcd($name)
             }
         }
         $answers[$i] = $second;
-
     }
     $finalAssocArray = array_combine($questions, $answers);
 
