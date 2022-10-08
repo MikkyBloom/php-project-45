@@ -31,7 +31,7 @@ function isEven($name)
 {
     $finalAssocArray = [];
 
-    for($i = 0; $i < 3; $i++) {
+    for ($i = 0; $i < 3; $i++) {
         $number = rand(1, 100);
         if ($number % 2 == 0) {
             $finalAssocArray[$number] = 'yes';
@@ -57,9 +57,8 @@ function calc($name)
     $finalAssocArray = [];
 
     $numbers = randArray();
-    
-    for ($i = 0; $i < 3; $i++) {
 
+    for ($i = 0; $i < 3; $i++) {
         $randKey1 = array_rand($numbers);
         $randKey2 = array_rand($numbers);
 
@@ -67,15 +66,15 @@ function calc($name)
             case 1:
                 $answers[] = "$numbers[$randKey1] + $numbers[$randKey2]";
                 $values[] = $numbers[$randKey1] + $numbers[$randKey2];
-            break;
+                break;
             case 2:
                 $answers[] = "$numbers[$randKey1] - $numbers[$randKey2]";
                 $values[] = $numbers[$randKey1] - $numbers[$randKey2];
-            break;
+                break;
             case 3:
                 $answers[] = "$numbers[$randKey1] * $numbers[$randKey2]";
                 $values[] = $numbers[$randKey1] * $numbers[$randKey2];
-            break;
+                break;
         }
     }
 
@@ -98,8 +97,7 @@ function gcd($name)
 
         $questions[$i] = "$first $second";
 
-        while ($first != $second)
-        {
+        while ($first != $second) {
             if ($first > $second) {
                 $first =  $first - $second;
             } else {
@@ -111,7 +109,6 @@ function gcd($name)
     $finalAssocArray = array_combine($questions, $answers);
 
     line('Find the greatest common divisor of given numbers.');
-    
     communication($finalAssocArray, $name);
 }
 
@@ -122,8 +119,7 @@ function progression($name)
     $answers = [];
     $finalAssocArray = [];
 
-    for ($i = 0; $i < 3; $i++){
-
+    for ($i = 0; $i < 3; $i++) {
         $start = rand(0, 3);
         $end = rand(20, 50);
         $step = rand(2, 5);
@@ -151,7 +147,7 @@ function isPrime($name)
     $randArray = [];
     //список рандомных чисел
     $primeNumbers = [1, 2, 3, 5, 7, 9];
-    
+
     $randArray = randArray();
 
     foreach ($randArray as $number) {
@@ -166,11 +162,11 @@ function isPrime($name)
         if ($flag == true) {
             $answers[] = 'yes';
         } else {
-            $answers[] ='no';
+            $answers[] = 'no';
         }
     }
     $finalAssocArray = array_combine($questions, $answers);
-    
+
     line('Answer "yes" if given number is prime. Otherwise answer "no".');
 
     communication($finalAssocArray, $name);
