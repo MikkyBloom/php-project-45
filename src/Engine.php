@@ -35,7 +35,7 @@ function isEven($name)
     $numbers = randArray();
     
     foreach ($numbers as $number) {
-        if (intdiv($number, 2) == 0) {
+        if ($number % 2 == 0) {
             $values[] = "yes";
         } else {
             $values[] = "no";
