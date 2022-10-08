@@ -137,7 +137,7 @@ function isPrime(string $name)
 
     foreach ($randArray as $number) {
         $questions[] = $number;
-        if (in_array($number, $primeNumbers, bool $strict = false)) {
+        if (in_array($number, $primeNumbers)) {
             $answers[] = 'yes';
             continue;
         }
