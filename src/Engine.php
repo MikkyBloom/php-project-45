@@ -29,19 +29,16 @@ function communication(array $finalAssocArray, string $name)
 
 function isEven($name)
 {
-    $numbers = [];
-    $values = [];
     $finalAssocArray = [];
-    $numbers = randArray();
-    
-    foreach ($numbers as $number) {
+
+    for($i = 0; $i < 3; $i++) {
+        $number = rand(1, 100);
         if ($number % 2 == 0) {
-            $values[] = "yes";
+            $finalAssocArray[$number] = 'yes';
         } else {
-            $values[] = "no";
+            $finalAssocArray[$number] = 'no';
         }
     }
-    $finalAssocArray = array_combine($numbers, $values);
 
     line('Answer "yes" if the number is even, otherwise answer "no".');
 
