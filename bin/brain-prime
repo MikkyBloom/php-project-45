@@ -5,14 +5,6 @@ namespace BrainGames\Cli;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use function BrainGames\Cli\welcome;
-use function BrainGames\Engine\isPrime;
-
-function prime()
-{
-    $name = welcome();
-    
-    isPrime($name);
-}
+use function BrainGames\Cli\prime;
 
 prime();
