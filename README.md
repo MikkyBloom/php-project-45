@@ -5,13 +5,13 @@
 ## About
 Casino always wins, that's what they say
 ## Install
+```
+$ git clone https://github.com/MikkyBloom/php-project-45
 
->$ git clone https://github.com/MikkyBloom/php-project-45
+$ cd php-project-45
 
->$ cd php-project-45
-
->$ make install
-
+$ make install
+```
 ## asciinema recordings:
 ### brain-even
 https://asciinema.org/a/vtM45Zwb3gk9Mjnz89AAqtyOX
