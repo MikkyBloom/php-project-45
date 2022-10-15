@@ -13,16 +13,13 @@ $ cd php-project-45
 $ make install
 ```
 ## asciinema recordings:
-### [brain-even](https://asciinema.org/a/vtM45Zwb3gk9Mjnz89AAqtyOX)
 
-### brain-calc
-https://asciinema.org/a/lUpVZdqhfsvnlt7vpOzcgCave
+* ### [brain-even](https://asciinema.org/a/vtM45Zwb3gk9Mjnz89AAqtyOX)
 
-### brain-gcd
-https://asciinema.org/a/VlbokNP3NJQ7v4u4oFgZlV2pA
+* ### [brain-calc](https://asciinema.org/a/lUpVZdqhfsvnlt7vpOzcgCave)
 
-### brain-progression
-https://asciinema.org/a/WBQ5INIXK8zItlM21jWBeEtHj
+* ### [brain-gcd](https://asciinema.org/a/VlbokNP3NJQ7v4u4oFgZlV2pA)
 
-### brain-prime
-https://asciinema.org/a/Aa0zrdAjgaTJnSUrSoyRPqQ6X
+* ### [brain-progression](https://asciinema.org/a/WBQ5INIXK8zItlM21jWBeEtHj)
+
+* ### [brain-prime](https://asciinema.org/a/Aa0zrdAjgaTJnSUrSoyRPqQ6X)
