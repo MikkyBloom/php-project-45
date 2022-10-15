@@ -13,8 +13,7 @@ $ cd php-project-45
 $ make install
 ```
 ## asciinema recordings:
-### brain-even
-https://asciinema.org/a/vtM45Zwb3gk9Mjnz89AAqtyOX
+### [brain-even](https://asciinema.org/a/vtM45Zwb3gk9Mjnz89AAqtyOX)
 
 ### brain-calc
 https://asciinema.org/a/lUpVZdqhfsvnlt7vpOzcgCave
