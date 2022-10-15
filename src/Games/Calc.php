@@ -7,7 +7,6 @@ use function BrainGames\Cli\welcome;
 function sum()
 {
     $name = welcome();
-    
     calc($name);
 }
 

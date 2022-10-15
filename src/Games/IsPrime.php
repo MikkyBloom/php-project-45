@@ -7,7 +7,6 @@ use function BrainGames\Cli\welcome;
 function prime()
 {
     $name = welcome();
-    
     isPrime($name);
 }
 

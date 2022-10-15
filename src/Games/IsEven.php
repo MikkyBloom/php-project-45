@@ -7,7 +7,6 @@ use function BrainGames\Cli\welcome;
 function even()
 {
     $name = welcome();
-    
     isEven($name);
 }
 

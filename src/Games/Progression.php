@@ -7,7 +7,6 @@ use function BrainGames\Cli\welcome;
 function progress()
 {
     $name = welcome();
-
     progression($name);
 }
 
