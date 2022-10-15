@@ -5,11 +5,11 @@
         "files": [
             "src/Cli.php",
             "src/Engine.php",
-            "src/calc.php",
-            "src/gcd.php",
-            "src/isEven.php",
-            "src/isPrime.php",
-            "src/progression.php"
+            "src/Games/Calc.php",
+            "src/Games/GCD.php",
+            "src/Games/IsEven.php",
+            "src/Games/IsPrime.php",
+            "src/Games/Progression.php"
         ]
     },
     "bin": [
