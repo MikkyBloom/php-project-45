@@ -4,6 +4,8 @@
 
 ## About
 Casino always wins, that's what they say
+## PHP
+The project is running on PHP 8.1.9
 ## Install
 ```
 $ git clone https://github.com/MikkyBloom/php-project-45
@@ -23,5 +25,3 @@ $ make install
 * ### [brain-progression](https://asciinema.org/a/WBQ5INIXK8zItlM21jWBeEtHj)
 
 * ### [brain-prime](https://asciinema.org/a/Aa0zrdAjgaTJnSUrSoyRPqQ6X)
-
-[![asciicast](https://asciinema.org/a/Aa0zrdAjgaTJnSUrSoyRPqQ6X.svg)](https://asciinema.org/a/Aa0zrdAjgaTJnSUrSoyRPqQ6X)
