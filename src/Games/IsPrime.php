@@ -18,8 +18,6 @@ function isPrime(string $name)
     $answers = [];
     //массив рандомных чисел
     $randArray = [];
-    //список простых чисел
-    $primeNumbers = [1, 2, 3, 5, 7];
 
     for ($i = 0; $i < 3; $i++) {
         $randArray[] = rand(1, 100);
@@ -27,10 +25,6 @@ function isPrime(string $name)
 
     foreach ($randArray as $number) {
         $questions[] = $number;
-        if (in_array($number, $primeNumbers)) {
-            $answers[] = 'yes';
-            continue;
-        }
 
         $flag = simplicity($number);
 
